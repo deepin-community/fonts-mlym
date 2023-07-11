@@ -1,15 +1,26 @@
-Source: template-repository
-Section: unknown
+Source: fonts-mlym
+Section: metapackages
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Fonts Task Force <debian-fonts@lists.debian.org>
+Uploaders: Vasudev Kamath <kamathvasudev@gmail.com>
+Build-Depends: debhelper-compat (= 12)
+Vcs-Git: https://salsa.debian.org/fonts-team/fonts-mlym.git
+Vcs-Browser: https://salsa.debian.org/fonts-team/fonts-mlym
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: fonts-mlym
+Section: fonts
+Architecture: all
+Multi-Arch: foreign
+Depends: fonts-lohit-mlym, fonts-samyak-mlym, fonts-smc, ${misc:Depends}
+Breaks: ttf-malayalam-fonts (<< 2:1.0)
+Replaces: ttf-malayalam-fonts
+Description: Meta package to install all Malayalam fonts
+ This package allows you to install all available Malayalam fonts
+ in Debian.
+ .
+ This package installs following fonts:
+   * fonts-lohit-mlym
+   * fonts-smc
+   * fonts-samyak-mlym
